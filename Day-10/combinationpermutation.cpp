@@ -46,6 +46,10 @@ int fact(int x){
 int combination(int n, int r){
     return fact(n)/(fact(r) * fact(n-r)); // Calculate combination using factorial
 }
+
+int permutation(int n, int r){
+    return fact(n) / fact(n - r); // Calculate permutation using factorial
+}
 int main(){
     int n;
     cout<<"Enter n : ";
@@ -59,7 +63,8 @@ int main(){
     int rfact = fact(r);
     int nrfact = fact(n-r);
     int ncr = combination(n,r);
-    cout<<ncr << endl; // Output the combination result
+    int npr = permutation(n, r); // Assuming you have a permutation function defined
+    cout<<ncr << endl<<npr; // Output the combination result
     
     
     
